@@ -54,7 +54,7 @@ a {
 .page-index .card {
   width: 100%;
   max-width: 1060px;
-  background: #9C27B0;
+  background: #FFFFFF;
   padding: 55px 80px 44px;
   text-align: center;
 }
@@ -299,12 +299,12 @@ a {
 
 .page-index .logo-slider::before {
   left: 0;
-  background: linear-gradient(to right, #9C27B0, transparent);
+  background: linear-gradient(to right, #FFFFFF, transparent);
 }
 
 .page-index .logo-slider::after {
   right: 0;
-  background: linear-gradient(to left, #9C27B0, transparent);
+  background: linear-gradient(to left, #FFFFFF, transparent);
 }
 
 .page-index .logo-track {
@@ -358,7 +358,7 @@ a {
 
 @media (max-width: 768px) {
   .page-index {
-    background: #9C27B0;
+    background: #FFFFFF;
     padding: 0;
     justify-content: flex-start;
   }
