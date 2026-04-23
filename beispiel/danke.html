@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <base href="/jart/prj3/tiles/ki_pilotprojekt/">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Wichtig: Schau dir jetzt das Video an! | tiles</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon.ico">
+  <link rel="apple-touch-icon" sizes="144x144" href="./apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { font-size: 16px; -webkit-text-size-adjust: 100%; }
+
+    body {
+      font-family: 'Work Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #000000;
+      background: #BFBFBF;
+      -webkit-font-smoothing: antialiased;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 52px 24px 0;
+    }
+
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; text-decoration: none; }
+
+    /* Top Card (white on gray) */
+    .card-top {
+      width: 100%;
+      max-width: 1120px;
+      background: #FFFFFF;
+      padding: 55px 80px 50px;
+      text-align: center;
+    }
+
+    /* Bottom section (white, full width, no gray) */
+    .card-bottom {
+      width: 100%;
+      background: #FFFFFF;
+      text-align: center;
+      margin-top: 48px;
+    }
+
+    .card-bottom-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 80px 50px;
+    }
+
+    /* Logo */
+    .logo-wrap { margin-bottom: 32px; }
+    .logo-wrap img { height: 60px; width: auto; margin: 0 auto; }
+
+    /* Urgency Box */
+    .urgency-box {
+      display: inline-flex;
+      align-items: flex-start;
+      gap: 20px;
+      background: #D63517;
+      color: #FFFFFF;
+      font-size: 17px;
+      font-weight: 600;
+      line-height: 1.4;
+      padding: 16px 28px;
+      border-radius: 10px;
+      margin-bottom: 28px;
+      max-width: 560px;
+      text-align: left;
+    }
+
+    .urgency-box svg {
+      flex-shrink: 0;
+      width: 44px;
+      height: 44px;
+      fill: #FFFFFF;
+      align-self: center;
+    }
+
+    /* Typography */
+    h1 {
+      font-size: 56px;
+      font-weight: 700;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      color: #000;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 38px;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      color: #000;
+      margin-bottom: 6px;
+    }
+
+    h3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #000;
+      margin-bottom: 6px;
+    }
+
+    .lead {
+      font-size: 20px;
+      line-height: 1.3;
+      color: #333;
+      max-width: 680px;
+      margin: 0 auto 10px;
+    }
+
+    .lead-urgent {
+      font-size: 18px;
+      line-height: 1.3;
+      color: #D63517;
+      font-weight: 700;
+      max-width: 640px;
+      margin: 0 auto 24px;
+    }
+
+    .text-body {
+      font-size: 18px;
+      line-height: 1.5;
+      color: #555;
+      max-width: 920px;
+      margin: 0 auto 40px;
+    }
+
+    /* Social Proof */
+    .social-proof {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      margin: 24px 0;
+    }
+
+    .avatar-stack { display: flex; flex-shrink: 0; }
+
+    .avatar-stack .avatar {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      border: 2px solid #FFFFFF;
+      margin-left: -10px;
+      background: #e0e0e0;
+      overflow: hidden;
+    }
+
+    .avatar-stack .avatar:first-child { margin-left: 0; }
+    .avatar-stack .avatar img { width: 100%; height: 100%; object-fit: cover; }
+
+    .social-proof-content {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      text-align: left;
+    }
+
+    .stars { color: #FF8800; font-size: 24px; letter-spacing: 2px; line-height: 1; }
+    .social-proof-text { font-size: 16px; font-weight: 700; color: #000; }
+
+    /* Divider */
+    .divider { width: 80px; height: 2px; background: #e0e0e0; margin: 56px auto; }
+
+    /* Video embed */
+    .video-wrap {
+      width: 100%;
+      max-width: 920px;
+      margin: 0 auto 24px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+    }
+
+    .wistia_responsive_padding { padding: 56.25% 0 0 0; position: relative; }
+    .wistia_responsive_wrapper { height: 100%; left: 0; position: absolute; top: 0; width: 100%; }
+
+    /* Photo */
+    .photo-wide {
+      width: 100%;
+      max-width: 920px;
+      margin: 0 auto 56px;
+    }
+
+    .photo-wide img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    /* Logo Marquee Slider */
+    .logo-slider {
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      margin: 24px auto 0;
+    }
+
+    .logo-slider::before,
+    .logo-slider::after {
+      content: '';
+      position: absolute;
+      top: 0; bottom: 0;
+      width: 80px;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .logo-slider::before { left: 0; background: linear-gradient(to right, #FFFFFF, transparent); }
+    .logo-slider::after { right: 0; background: linear-gradient(to left, #FFFFFF, transparent); }
+
+    .logo-track {
+      display: flex;
+      gap: 50px;
+      align-items: center;
+      animation: marquee 14s linear infinite;
+      width: max-content;
+    }
+
+    .logo-track img { height: 60px; width: auto; flex-shrink: 0; }
+
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* Steps */
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      max-width: 920px;
+      margin: 28px auto 0;
+    }
+
+    .step-num {
+      display: flex; align-items: center; justify-content: center;
+      width: 48px; height: 48px; background: #D63517; color: #FFF;
+      border-radius: 50%; font-size: 20px; font-weight: 700; margin: 0 auto 12px;
+    }
+
+    .step h3 { font-size: 18px; margin-bottom: 6px; }
+    .step p { font-size: 16px; color: #666; line-height: 1.55; }
+
+    /* Benefit Grid (replaces checklist) */
+    .benefit-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      max-width: 920px;
+      margin: 28px auto 0;
+      text-align: center;
+    }
+
+    .benefit-card {
+      padding: 28px 20px;
+      background: #F7F7F7;
+      border-radius: 10px;
+    }
+
+    .benefit-icon {
+      font-size: 32px;
+      color: #D63517;
+      margin: 0 auto 10px;
+      line-height: 1;
+    }
+
+    .benefit-card p {
+      font-size: 16px;
+      color: #333;
+      line-height: 1.5;
+    }
+
+    /* Feature Grid */
+    .feature-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+      text-align: left; max-width: 920px; margin: 28px auto 0;
+    }
+
+    .feature-card {
+      padding: 28px; background: #F7F7F7; border-radius: 10px; border-left: 4px solid #D63517;
+    }
+
+    .feature-card h3 { font-size: 18px; margin-bottom: 6px; }
+    .feature-card p { font-size: 16px; color: #555; line-height: 1.55; }
+
+    /* Error List */
+    .error-list {
+      list-style: none; padding: 0; max-width: 920px; margin: 28px auto 0; text-align: left;
+    }
+
+    .error-list li {
+      display: flex; align-items: flex-start; gap: 14px;
+      padding: 10px 0; font-size: 18px; color: #333; line-height: 1.5;
+    }
+
+    .warn-icon {
+      flex-shrink: 0; width: 26px; height: 26px; background: #D63517; border-radius: 50%;
+      color: #fff; font-size: 14px; font-weight: 700;
+      display: flex; align-items: center; justify-content: center; margin-top: 2px;
+    }
+
+    /* Metrics */
+    .metrics {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+      max-width: 920px; margin: 28px auto 0;
+    }
+
+    .metric { text-align: center; padding: 24px; background: #F7F7F7; border-radius: 10px; }
+    .metric .number { font-size: 40px; font-weight: 800; color: #D63517; line-height: 1; margin-bottom: 6px; }
+    .metric .label { font-size: 15px; color: #666; font-weight: 500; }
+
+    /* Case Studies */
+    .case-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+      max-width: 920px; margin: 28px auto 0; text-align: left;
+    }
+
+    .case-card {
+      padding: 28px; background: #F7F7F7; border-radius: 10px; border-top: 4px solid #D63517;
+    }
+
+    .case-logo {
+      height: 40px;
+      margin-bottom: 14px;
+    }
+
+    .case-logo img {
+      height: 40px;
+      width: auto;
+    }
+
+    /* Placeholder for logos - replace src with actual logo images */
+    .case-logo-text {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      color: #999;
+      border: 2px solid #ddd;
+      padding: 6px 14px;
+      border-radius: 6px;
+      margin-bottom: 14px;
+    }
+
+    .case-card .case-label { font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #D63517; margin-bottom: 8px; }
+    .case-card h3 { font-size: 17px; margin-bottom: 6px; }
+    .case-card p { font-size: 15px; color: #555; line-height: 1.5; margin-bottom: 8px; }
+    .case-card .result { font-size: 15px; font-weight: 700; color: #22a652; }
+
+    /* Testimonials */
+    .testimonial-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+      text-align: left; max-width: 920px; margin: 28px auto 0;
+    }
+
+    .testimonial-card { padding: 28px; background: #F7F7F7; border-radius: 10px; }
+    .testimonial-card .tc-stars { color: #FF8800; font-size: 16px; letter-spacing: 1px; margin-bottom: 10px; }
+    .testimonial-card blockquote { font-size: 16px; line-height: 1.6; color: #333; font-style: italic; margin-bottom: 14px; }
+    .t-author .name { font-size: 15px; font-weight: 700; color: #000; }
+    .t-author .role { font-size: 13px; color: #888; }
+
+    /* Team */
+    .team-names { font-size: 18px; font-weight: 700; color: #000; margin-bottom: 6px; }
+    .team-desc { font-size: 16px; color: #666; line-height: 1.6; max-width: 540px; margin: 0 auto; }
+    .team-contact { font-size: 14px; color: #888; margin-top: 10px; }
+    .team-contact a { color: #000; text-decoration: underline; }
+
+    /* Footer */
+    .footer {
+      width: 100%; text-align: center; padding: 16px 20px;
+      font-size: 12px; color: #888; background: #FFF;
+    }
+
+    .footer a { color: #888; text-decoration: none; }
+    .footer a:hover { color: #000; text-decoration: underline; }
+    .footer-links { display: flex; justify-content: center; gap: 16px; margin-top: 4px; }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      body { background: #FFF; padding: 0; }
+      .card-top { padding: 32px 20px 28px; max-width: 100%; }
+      .card-bottom { margin-top: 0; }
+      .card-bottom-inner { padding: 0 20px 28px; }
+      .logo-wrap img { height: 60px; }
+      h1 { font-size: 32px; }
+      h2 { font-size: 26px; }
+      .lead { font-size: 17px; }
+      .lead-urgent { font-size: 16px; }
+      .steps, .feature-grid, .testimonial-grid, .case-grid, .benefit-grid { grid-template-columns: 1fr; }
+      .metrics { gap: 10px; }
+      .metric .number { font-size: 28px; }
+      .social-proof { flex-direction: column; gap: 8px; }
+      .social-proof-content { text-align: center; align-items: center; }
+      .logo-track img { height: 46px; }
+      .logo-track { gap: 36px; }
+      .logo-slider { margin-top: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP SECTION: White card on gray background -->
+  <div class="card-top">
+
+    <!-- Logo -->
+    <div class="logo-wrap">
+      <img src="./tiles-logo.png" alt="tiles" width="500" height="166">
+    </div>
+
+    <h1>Danke &ndash; wir rufen dich<br>in 3 Minuten an!</h1>
+
+    <div class="urgency-box">
+      <svg viewBox="0 0 24 24"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>
+      <span>Schau dir jetzt das Video an, damit du vorbereitet bist &ndash; unsere digitale Mitarbeiterin Sophie meldet sich gleich bei dir.</span>
+    </div>
+
+    <!-- Video Embed (Wistia) -->
+    <div class="video-wrap">
+      <div class="wistia_responsive_padding">
+        <div class="wistia_responsive_wrapper">
+          <iframe src="https://fast.wistia.net/embed/iframe/08zdxrmk1h?seo=true&videoFoam=true" title="tiles Video" allow="autoplay; fullscreen" frameborder="0" scrolling="no" style="width:100%;height:100%;position:absolute;left:0;top:0;"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- Social Proof -->
+    <div class="social-proof">
+      <div class="avatar-stack">
+        <div class="avatar"><img src="https://onecdn.io/media/248c088a-e07d-45c4-b3a5-95ca025543a0/sm" alt=""></div>
+        <div class="avatar"><img src="https://onecdn.io/media/dd055f77-0cdc-457f-98e6-c037c613bcb4/sm" alt=""></div>
+        <div class="avatar"><img src="https://onecdn.io/media/4c300a54-7fac-4e79-934e-7014be31100e/sm" alt=""></div>
+        <div class="avatar"><img src="https://onecdn.io/media/bea77666-4731-451e-9437-d45d044db1a1/sm" alt=""></div>
+        <div class="avatar"><img src="https://onecdn.io/media/3661e5b8-27f1-4dbc-8c94-93dd6bdabb17/sm" alt=""></div>
+        <div class="avatar"><img src="https://onecdn.io/media/d094bbf2-22ed-47ef-95be-a314755dd682/sm" alt=""></div>
+      </div>
+      <div class="social-proof-content">
+        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span class="social-proof-text">ÜBER 400 UNTERNEHMEN ERFOLGREICH BEGLEITET</span>
+      </div>
+    </div>
+
+    <!-- Logo Slider -->
+    <div class="logo-slider">
+      <div class="logo-track">
+        <img src="https://onecdn.io/media/67ae7fd2-244c-4212-9a71-70a8d6408e15/sm" alt="Land Niederösterreich">
+        <img src="https://onecdn.io/media/92adf4c0-7c8b-48e4-bc54-eaeaa597e2bc/sm" alt="Meta Business Partner">
+        <img src="https://onecdn.io/media/6e73cf71-264d-484d-b802-2867ef02e785/sm" alt="Stadt Wien">
+        <img src="https://onecdn.io/media/2330063a-9859-4b10-a996-a7f26be3691a/sm" alt="Google Partner">
+        <img src="https://onecdn.io/media/d6baf345-086b-49dd-a02d-6cc4d0058822/sm" alt="KMU Digital">
+        <img src="https://onecdn.io/media/67ae7fd2-244c-4212-9a71-70a8d6408e15/sm" alt="Land Niederösterreich">
+        <img src="https://onecdn.io/media/92adf4c0-7c8b-48e4-bc54-eaeaa597e2bc/sm" alt="Meta Business Partner">
+        <img src="https://onecdn.io/media/6e73cf71-264d-484d-b802-2867ef02e785/sm" alt="Stadt Wien">
+        <img src="https://onecdn.io/media/2330063a-9859-4b10-a996-a7f26be3691a/sm" alt="Google Partner">
+        <img src="https://onecdn.io/media/d6baf345-086b-49dd-a02d-6cc4d0058822/sm" alt="KMU Digital">
+      </div>
+    </div>
+
+  </div>
+
+  <!-- BOTTOM SECTION: White, no gray background -->
+  <div class="card-bottom">
+    <div class="card-bottom-inner">
+
+    <div class="divider"></div>
+
+    <!-- Ablauf -->
+    <h2>So läuft das Pilotprojekt ab</h2>
+    <p class="text-body">In drei klaren Schritten vom Ist-Zustand zu echten Ergebnissen.</p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Sophie kontaktiert dich</h3>
+        <p>Unsere digitale Mitarbeiterin meldet sich in wenigen Minuten bei dir, um alle Details und den nächsten Termin zu klären.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>Prozessanalyse</h3>
+        <p>Wir analysieren eure Abläufe im Detail und identifizieren, wo KI den größten Hebel hat.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>Erste Automatisierung</h3>
+        <p>Die wichtigsten Prozesse werden automatisiert und in eure bestehenden Systeme integriert.</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Was dich erwartet -->
+    <h2>Was dich als Pilotunternehmen erwartet</h2>
+
+    <div class="benefit-grid">
+      <div class="benefit-card">
+        <div class="benefit-icon">&#10003;</div>
+        <p>Detailanalyse eurer wiederkehrenden Prozesse und Abläufe</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">&#10003;</div>
+        <p>Identifikation der größten Zeithebel in eurem Unternehmen</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">&#10003;</div>
+        <p>Automatisierung der ersten Abläufe in Marketing, Vertrieb oder Leadgenerierung</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">&#10003;</div>
+        <p>Bis zu 20 Wochenstunden Ersparnis pro Mitarbeiter</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">&#10003;</div>
+        <p>Persönliche Betreuung durch unser Expertenteam</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Bild -->
+    <div class="photo-wide">
+      <img src="./_DSC7131_websize.jpg" alt="tiles Team">
+    </div>
+
+    <!-- Was KI kann -->
+    <h2>Was mit KI-Automatisierung möglich ist</h2>
+    <p class="text-body">Nicht mehr Tools. Nicht mehr Komplexität. Sondern weniger manuelle Arbeit und mehr Wirkung mit den vorhandenen Systemen.</p>
+
+    <div class="feature-grid">
+      <div class="feature-card">
+        <h3>Automatische Leadgenerierung</h3>
+        <p>Vollautomatische Leadrecherche, automatisierte Kontaktaufnahme, Follow-Up Erinnerungen und Social Media Lead Import.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Vertrieb</h3>
+        <p>Transkripte von Telefonaten, automatische Angebotserstellung, Cross- und Upselling Automation, automatisches CRM-Management.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Marketing</h3>
+        <p>Automatische Social Media Posts, Blogposts, Newsletter. Automatisierter Videoschnitt und personalisiertes E-Mail Marketing.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Fulfillment &amp; Backoffice</h3>
+        <p>Klar zugeordnete To-Do-Listen, vereinfachte Freigabeprozesse, automatisierte Zeiterfassung und smarte Erinnerungen.</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Metrics -->
+    <div class="metrics">
+      <div class="metric">
+        <div class="number">400+</div>
+        <div class="label">Kunden</div>
+      </div>
+      <div class="metric">
+        <div class="number">10+</div>
+        <div class="label">Jahre Erfahrung</div>
+      </div>
+      <div class="metric">
+        <div class="number">50%</div>
+        <div class="label">Effizienzsteigerung</div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- 5 Fehler -->
+    <h2>5 fatale Fehler, die B2B-Unternehmen ihre Marge kosten</h2>
+    <p class="text-body">(Und die trotzdem fast jedes B2B-Unternehmen macht)</p>
+
+    <ul class="error-list">
+      <li><span class="warn-icon">!</span><div><strong>Empfehlungen als Hauptvertriebsstrategie</strong> &ndash; Wer fast nur von Empfehlungen lebt, macht sich abhängig und verschenkt planbares Wachstum.</div></li>
+      <li><span class="warn-icon">!</span><div><strong>Keine automatische Leadrecherche</strong> &ndash; Das Vertriebsteam hat keine Chance, weil du mit der Kontaktaufnahme immer langsamer bist als die Konkurrenz.</div></li>
+      <li><span class="warn-icon">!</span><div><strong>Wertvolle Infos landen nicht sauber im CRM</strong> &ndash; Gesprächsnotizen, Messekontakte und Follow-ups gehen verloren.</div></li>
+      <li><span class="warn-icon">!</span><div><strong>Marketing passiert nur, wenn gerade Zeit ist</strong> &ndash; Fehlende Sichtbarkeit sorgt dafür, dass dein Unternehmen trotz guter Leistung zu selten wahrgenommen wird.</div></li>
+      <li><span class="warn-icon">!</span><div><strong>Kontakte werden nicht konsequent nachverfolgt</strong> &ndash; Fehlendes Nachfassen kostet genau die Abschlüsse, die eigentlich schon greifbar waren.</div></li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <!-- Bild -->
+    <div class="photo-wide">
+      <img src="./_DSC6928_websize.jpg" alt="tiles Beratung">
+    </div>
+
+    <!-- Fallstudien -->
+    <h2>Ergebnisse aus der Praxis</h2>
+
+    <div class="case-grid">
+      <div class="case-card">
+        <!-- Logo-Platzhalter: ersetze mit <div class="case-logo"><img src="mapei-logo.png" alt="MAPEI"></div> -->
+        <div class="case-logo-text">MAPEI</div>
+        <div class="case-label">Fallstudie</div>
+        <h3>MAPEI Austria GmbH</h3>
+        <p>Vom manuellen Layoutprozess zum automatisiert erstellten 800-Produkte-Katalog auf Knopfdruck.</p>
+        <span class="result">&#10003; Extremer Zeitgewinn, fehlerfreie Daten</span>
+      </div>
+      <div class="case-card">
+        <div class="case-logo-text">DWSE</div>
+        <div class="case-label">Fallstudie</div>
+        <h3>Dachverband Wiener Sozialeinrichtungen</h3>
+        <p>Vollautomatisierter Einreichungsprozess ersetzt wochenlangen E-Mail-Verkehr und Meetings.</p>
+        <span class="result">&#10003; Klar definierter digitaler Prozess</span>
+      </div>
+      <div class="case-card">
+        <!-- Land NÖ Logo haben wir bereits -->
+        <div class="case-logo"><img src="https://onecdn.io/media/67ae7fd2-244c-4212-9a71-70a8d6408e15/sm" alt="Land Niederösterreich"></div>
+        <div class="case-label">Fallstudie</div>
+        <h3>Land NÖ &ndash; Talente Check</h3>
+        <p>Manuelle Terminvereinbarung durch vollautomatisierte Anmelde- und Verwaltungsprozesse ersetzt.</p>
+        <span class="result">&#10003; Drastisch reduzierter Zeitaufwand</span>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Testimonials -->
+    <h2>Das sagen unsere Kunden</h2>
+
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>&bdquo;tiles sind stets für wahre Herkules-Aufgaben gerüstet, wobei sie nicht nur professionell und zuverlässig, sondern auch mit viel Gespür für die passende Tonalität bei komplexen Themenstellungen sind.&ldquo;</blockquote>
+        <div class="t-author"><div class="name">ZKW Group</div></div>
+      </div>
+      <div class="testimonial-card">
+        <div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>&bdquo;Stets on-time, perfekt aufbereitete Inhalte und den Fokus immer auf die reibungslose Umsetzbarkeit bedacht &ndash; können wir das Team von tiles nur wärmstens empfehlen!&ldquo;</blockquote>
+        <div class="t-author"><div class="name">Mag. Elisabeth Sunk</div><div class="role">Marketing &amp; Innovation Specialist</div></div>
+      </div>
+      <div class="testimonial-card">
+        <div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>&bdquo;Kreative Ansätze, eine rasche und professionelle Umsetzung, gepaart mit dem Verständnis für unser umfangreiches Produktportfolio, ermöglicht es uns, das Augenmerk auf unser Kerngeschäft zu konzentrieren.&ldquo;</blockquote>
+        <div class="t-author"><div class="name">DI Josef Wolfbeißer</div><div class="role">CEO, ConPlusUltra</div></div>
+      </div>
+      <div class="testimonial-card">
+        <div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>&bdquo;tiles? Mit schneller, kompetenter und zuverlässiger Beratung und Begleitung fachgerecht zur individuellen Lösung gelangt. Gerne wieder mit euch.&ldquo;</blockquote>
+        <div class="t-author"><div class="name">Anton Schmalhofer</div><div class="role">Ressortleiter</div></div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Team -->
+    <div class="photo-wide" style="max-width: 600px;">
+      <img src="./_DSC6947_websize.jpg" alt="tiles Team">
+    </div>
+
+    <p class="team-names">Michael Rohrböck &amp; Matthias Königsberger</p>
+    <p class="team-desc">Geschäftsführer und Gründer von tiles. Seit über 10 Jahren unterstützen wir Unternehmen dabei, mit modernsten Lösungen zu wachsen &ndash; immer am Puls der Zeit.</p>
+    <p class="team-contact">tiles Media GmbH &middot; Wienerstraße 3 &middot; A-3100 St. Pölten &middot; <a href="https://www.tiles.at" target="_blank" rel="noopener">www.tiles.at</a></p>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <span>&copy; 2026 tiles media GmbH. Alle Rechte vorbehalten</span>
+    <div class="footer-links">
+      <a href="https://www.tiles.at/impressum" target="_blank" rel="noopener">Impressum</a>
+      <a href="https://www.tiles.at/datenschutz" target="_blank" rel="noopener">Datenschutz</a>
+    </div>
+  </footer>
+
+</body>
+</html>
